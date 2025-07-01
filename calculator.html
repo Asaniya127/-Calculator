@@ -6,7 +6,7 @@
 	<title>
 		Scientific Calculator using HTML, CSS and Js
 	</title>
-    
+    <link rel="stylesheet" href="./style.css"/>
 	<script src=
 "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
 			integrity=
@@ -15,90 +15,7 @@
 			referrerpolicy="no-referrer">
 	</script>
 </head>
-<style>
-    table {
-	    border: 1px solid black;
-	    margin-left: auto;
-	    margin-right: auto;
-    }
-
-    input[type="button"] {
-	    width: 100%;
-	    padding: 20px 40px;
-	    background-color: green;
-	    color: white;
-	    font-size: 24px;
-	    font-weight: bold;
-	    border: none;
-	    border-radius: 5px;
-    }
-
-    input[type="text"] {
-	    padding: 20px 240px;
-	    font-size: 24px;
-	    font-weight: bold;
-	    border: none;
-	    border-radius: 5px;
-	    border: 2px solid black;
-	    text-align: left;
-    }
-
-    display {
-	    text-align: left;
-    }
-
-</style>
-
-<script>
-    function backspace() {
-	    let display = document.getElementById("display");
-	    display.value = display.value.slice(0, -1);
-    }
-
-    function calculate() {
-	    let display = document.getElementById("display");
-	    let expression = display.value;
-	    let result;
-
-	    try {
-		// Convert trigonometric function inputs from degrees to radians
-		    expression = expression.replace(/sin\(/g, 'sin(' + Math.PI / 180 + '*');
-		    expression = expression.replace(/cos\(/g, 'cos(' + Math.PI / 180 + '*');
-		    expression = expression.replace(/tan\(/g, 'tan(' + Math.PI / 180 + '*');
-
-		    result = math.evaluate(expression);
-		    display.value = result;
-	    } catch (error) {
-		    display.value = "Error";
-	    }
-    }
-
-    function squareRoot() {
-	    let display = document.getElementById("display");
-	    display.value += "sqrt(";
-    }
-
-    function base10Log() {
-	    let display = document.getElementById("display");
-	    display.value += "log(";
-    }
-
-    function pi() {
-	    let display = document.getElementById("display");
-	    display.value += "pi";
-    }
-
-    function e() {
-	    let display = document.getElementById("display");
-	    display.value += "e";
-    }
-
-    function power() {
-	    let display = document.getElementById("display");
-	    display.value += "^(";
-    }
-
-</script>
+<script src="./"></script>
 
 <body>
 	<h1 style="color: green; text-align: center;">
